@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/bootstrap.css")
+    @Styles.Render("~/Content/Site.css")
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />    
+</head>
+<body style="background-image:url('../../Image/back3.jpg')">
+    <nav class="navbar navbar-inverse  navbar-fixed-top " style="color:white;">
+        <a class="navbar-brand" href="#">
+
+            <!-- Add logo with size of 90*80 -->
+            <img style="height:30px; margin-top:10px; margin-left:15px" src="~/Image/GK_Logo2.jpg" class="logo" />
+        </a>
+        <div class="container">
+
+          
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav  ">
+
+
+                    <li> @Html.ActionLink("AboutUs", "About", "Home", null, new { style = "color: white" })  </li>
+
+                    <li>@Html.ActionLink("ContactUs", "Contact", "Home", null, new { style = "color: white" })</li>
+                    <li>@Html.ActionLink("FAQ", "FAQ", "Home", null, new { style = "color: white" })</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right ">
+
+
+                    <li> @Html.ActionLink("SignUp", "Register", "Home", null, new { style = "color: white" })</li>
+
+                    <li>@Html.ActionLink("Login", "Login", "Home", null, new { style = "color: white" })</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="container body-content">
+        @RenderBody()
+
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
